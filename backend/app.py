@@ -23,4 +23,4 @@ def get_popular_ingredients( coords:tuple ) -> list:
     for i in restaurants:
         l.append(i[0])
     return l
-    
+
