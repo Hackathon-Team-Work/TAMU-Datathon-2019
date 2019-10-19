@@ -1,0 +1,23 @@
+#python venv
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+#flask
+instance/
+.webassets-cache
+#jupyter
+.ipynb_checkpoints
+# Vuejs
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+src/_drafts
+package-lock.json
