@@ -1,15 +1,19 @@
+import pandas as pd
+data_path = './../dataset/clean/just_tacos_and_burritos_v2.csv' 
+data = pd.read_csv(data_path)
 from flask import Flask
 app = Flask(__name__)
 
 
 @app.route('/')
 def root_route():
-    return "Hello, World!"
+    return data.head().to_json()
 
 
 @app.route('/restaurantsWithinZip')
 def restaurants_within_zip(zip_code: int) -> dict: 
     x = {}
+    print(data.head())
     return x
 
 
