@@ -22,9 +22,9 @@ export default {
   padding: 0;
   font-family: "Open Sans", sans-serif;
   display: grid;
-  grid-template-columns: 15em auto;
+  grid-template-columns: 17em auto;
   grid-template-areas: "navBar dashboard";
-  background-color: #f7f7fc;
+  /*background-color: #f7f7fc;*/
 }
 .slide-enter-active {
   transition-duration: 0.3s;
@@ -54,7 +54,7 @@ body {
 }
 /* screen on the right */
 .first-background {
-  background-color: #f7f7fc;
+  /*background-color: #f7f7fc;*/
   padding: 2em 2.8em;
   min-height: 100vh;
 }

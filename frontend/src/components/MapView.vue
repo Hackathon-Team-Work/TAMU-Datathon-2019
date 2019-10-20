@@ -1,10 +1,14 @@
 <template>
-    <div class="container mt-3 mt-sm-5" id="app">
-        <div class="row">
-            <div class="col-md-9">
+    <div class="container" id="app">
+        <div class="">
+<!--            <div>-->
+<!--                <h1>Taco 'Bout It</h1>-->
+<!--            </div>-->
+            <div>
                 <div class="map" id="map"></div>
             </div>
-            <div class="col-md-3">
+            <div id="filters" >
+                <label>Filters: </label>
                 <div
                         class="form-check"
                         v-for="layer of getStoredLayers"
@@ -52,8 +56,16 @@
 </script>
 
 <style scoped>
+#filters {
+    border: 2px solid blue;
+    border-radius: 1em;
+    padding: 1em;
+    margin-top: 1em;
+    margin-left: 30em;
+    width: 15em;
+}
 #map {
     height: 40em;
-    width: 70em;
+    width: 100em;
 }
 </style>

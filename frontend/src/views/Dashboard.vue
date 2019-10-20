@@ -1,20 +1,18 @@
 <template>
   <main class="first-background">
-    <h1>Matches</h1>
     <div class="second-background">
-      <map-view :map="map"></map-view>
+      <map-view id="myMap" :map="map"></map-view>
     </div>
   </main>
 </template>
 
 <script>
 import MapView from "@/components/MapView.vue";
-import TransactionTable from "@/components/TransactionTable.vue";
-
 export default {
   components: {
-    MapView,
-    TransactionTable
+    MapView
+    // ,
+    // TransactionTable
   },
   data() {
     return {
@@ -35,16 +33,18 @@ export default {
         markerFeatures.forEach((feature) => {
           feature.leafletObject = L.marker(feature.coords)
                   .bindPopup(feature.name);
+          feature.leafletObject.addTo(this.map);
         });
 
         polygonFeatures.forEach((feature) => {
           feature.leafletObject = L.polygon(feature.coords)
                   .bindPopup(feature.name);
+          feature.leafletObject.addTo(this.map);
         });
       });
     },
     initMap() {
-      this.map = L.map('map').setView([38.63, -90.23], 12);
+      this.map = L.map('map').setView([38.63, -90.23], 13);
       this.tileLayer = L.tileLayer(
               'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
               {
@@ -62,4 +62,7 @@ export default {
 </script>
 
 <style scoped>
+  #myMap {
+    margin-top: 4em;
+  }
 </style>
