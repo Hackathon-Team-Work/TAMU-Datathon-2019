@@ -13,14 +13,14 @@ Vue.use(Router);
 export default new Router({
   mode: "history",
   routes: [
+    // {
+    //   path: "/",
+    //   name: "home",
+    //   components: { navbar: NavBar },
+    //   props: { navbar: { login: true } }
+    // },
     {
       path: "/",
-      name: "home",
-      components: { navbar: NavBar },
-      props: { navbar: { login: true } }
-    },
-    {
-      path: "/dashboard",
       name: "dashboard",
       components: { default: Dashboard, navbar: NavBar, map: MapView }
     },
