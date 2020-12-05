@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "mv dist/index.html dist/200.html && surge --project dist"
+    "deploy": "mv dist/index.html dist/200.html && surge --project dist --domain https://tacoboutit.tech"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
